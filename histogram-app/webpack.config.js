@@ -7,7 +7,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3001',
     'webpack/hot/only-dev-server',
-    './src/client'
+    './src/Client'
   ],
   output: {
     path: path.join(__dirname, 'public'),
@@ -21,14 +21,21 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.jsx?$/,
       loaders: ['babel-loader'],
       include: path.join(__dirname, 'src')
     }, {
       test: /\.css$/,
-      loaders: ['style-loader', 'css-loader'],
-      include: path.join(__dirname, 'src')
+      loaders: ['style-loader', 'css-loader']
+    },
+    {
+      test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+      loader: 'url-loader',
+      query: { mimetype: 'image/png' }
+    },
+  {   test: /\.csv|tsv?$/,
+      loader: 'dsv-file-loader'
     }]
   }
 };

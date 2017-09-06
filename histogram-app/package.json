@@ -35,8 +35,10 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "css-loader": "^0.28.4",
+    "dsv-file-loader": "^0.1.1",
     "eslint": "^2.13.1",
     "eslint-plugin-react": "^5.1.1",
+    "json-loader": "^0.5.7",
     "react-hot-loader": "^3.0.0-beta.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",
@@ -45,11 +47,13 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "d3": "^4.10.2",
+    "file-loader": "^0.11.2",
     "jest": "^21.0.1",
     "lodash": "^4.17.4",
     "react": "^15.1.0",
     "react-dom": "^15.6.1",
     "string": "^3.3.3",
-    "topojson": "^3.0.2"
+    "topojson": "^3.0.2",
+    "url-loader": "^0.5.9"
   }
 }
